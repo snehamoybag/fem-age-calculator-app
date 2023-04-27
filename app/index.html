@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="author" content="Snehamoy Bag">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Javascript -->
+    <script src="app.js" defer></script>
+    <title>Frontend Mentor | Age calculator App</title>
+</head>
+<body>
+    <header>
+        <h1 class="sr-only">Age Calculator: Know Your Exact Age</h1>
+    </header>
+    <main class="main">
+        <div class="app">
+            <form id="dob" class="app__dob-form" action="/" method="GET">
+                <fieldset>
+                    <legend class="sr-only">Enter your Date of Birth</legend>
+                    <label for="dob-day">
+                        Day
+                        <input id="dob-day" type="number" placeholder="DD" required="true" aria-invalid="true" aria-describedby="dob-err-day">
+                        <span id="dob-err-day" class="form__error-texts"></span>
+                    </label>
+                    <label for="dob-month">
+                        Month
+                        <input id="dob-month" type="number" placeholder="MM" required="true" aria-invalid="true" aria-describedby="dob-err-month">
+                        <span id="dob-err-month" class="form__error-text"></span>
+                    </label>
+                    <label for="dob-year">
+                        Year
+                        <input id="dob-year" type="number" placeholder="YYYY" required="true" aria-invalid="true" aria-describedby="dob-err-year">
+                        <span id="dob-err-year" class="form__error-texts"></span>
+                    </label>
+                </fieldset>
+                <button type="submit">
+                    <span class="sr-only">Submit</span>
+                </button>
+            </form>
+            <div class="user-age">
+                <h2 class="sr-only">You are: </h2>
+                <p>
+                    <span><span class="colored-texts">--</span> years</span>
+                    <span><span class="colored-texts">--</span>months</span>
+                    <span><span class="colored-texts">--</span>days</span>
+                    <span class="sr-only">old.</span>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+        </div>
+    </footer>
+</body>
+</html>

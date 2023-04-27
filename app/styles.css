@@ -1,0 +1,116 @@
+/* Local Fonts */
+@font-face {
+    font-family: "Poppins";
+    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('./assets/fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('./assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('./assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Global Custom Properties  */
+:root {
+    --clr-primary: hsl(259, 100%, 65%);
+    --clr-secondary: hsl(0, 100%, 67%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(0, 0%, 94%);
+    --clr-neutral-300: hsl(0, 0%, 86%);
+    --clr-neutral-400: hsl(0, 1%, 44%);
+    --clr-neutral-700: hsl(0, 0%, 8%);
+}
+
+
+/* Basic css reset */
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* resets font stylings */
+    font: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+img, svg {
+    max-width: 100%;
+}
+
+/* Mobile First Workflow */
+body {
+    /* reminder: add a fallback later */
+    font-family: "Poppins";
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-400);
+    /* make footer always stay on bottom of the screen */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.main {
+    padding: 1em;
+    /* place the card on the center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    background-color: var(--clr-neutral-100);
+    padding: 3em 1.5em;
+    border-radius: 1.25rem;
+    border-bottom-right-radius: 30%;
+}
+
+.app__dob-form input {
+    display: block;
+    max-width: 100%;
+}
+
+/* Utility Classes */
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
